@@ -23,11 +23,17 @@ It sorts the data by inserting each element into the already sorted sublist at t
 # Merge_Sort: 
 It uses the "Divide and Conquer" principle, where it divides the list into small parts, then gradually merges them together to obtain the sorted list. It is efficient and effective for large lists.
 # Quick_Sort:
- It divides the list into smaller parts using a pivot element, then sorts the parts around the pivot. It is efficient for large lists but can be unstable in some cases.
+ It divides the list into smaller parts using a pivot element, then sorts the parts around the pivot. It is efficient for large lists but can be unstable in some cases. divide-and-conquer algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. For this reason, it is sometimes called partition-exchange sort.[4] The sub-arrays are then sorted recursively. This can be done in-place, requiring small additional amounts of memory to perform the sorting.
+
+Quicksort is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation (formally, a total order) is defined. Most implementations of quicksort are not stable, meaning that the relative order of equal sort items is not preserved.
+
+![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sorting_quicksort_anim.gif/220px-Sorting_quicksort_anim.gif)
+
+
 There are also other sorting algorithms like #Shell_Sort, 
 # Selection_Sort
  is an in-place comparison sorting algorithm. It has an O(n2) time complexity, which makes it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity and has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.
- 
+
 ![logo](https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif)
 , #Heap_Sort, and more.
 
