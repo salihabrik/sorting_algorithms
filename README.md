@@ -28,13 +28,13 @@ It uses the "Divide and Conquer" principle, where it divides the list into small
 Quicksort is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation (formally, a total order) is defined. Most implementations of quicksort are not stable, meaning that the relative order of equal sort items is not preserved.
 
 ![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sorting_quicksort_anim.gif/220px-Sorting_quicksort_anim.gif)
+ 
 
 
-There are also other sorting algorithms like #Shell_Sort, 
 # Selection_Sort
  is an in-place comparison sorting algorithm. It has an O(n2) time complexity, which makes it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity and has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited.
 
 ![logo](https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif)
-, #Heap_Sort, and more.
+
 
 In general, there is no single best sorting algorithm for all cases. The choice of the appropriate algorithm depends on the size of the list, the type of data, and the performance requirements. Therefore, it is advisable to choose the sorting algorithm based on the specific scenario and the desired performance analysis
