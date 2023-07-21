@@ -10,6 +10,8 @@ There are several types of sorting algorithms, each with its own features and pe
 It sorts the data by inserting each element into the already sorted sublist at the appropriate position. It is suitable for small lists or partially sorted lists.
 # Bubble_Sort:
  It repeatedly passes through the list of elements to be sorted and exchanges adjacent elements if they are in the wrong order. It is simple to implement but inefficient for large lists.
+
+ ![logo](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 # Merge_Sort: 
 It uses the "Divide and Conquer" principle, where it divides the list into small parts, then gradually merges them together to obtain the sorted list. It is efficient and effective for large lists.
 # Quick_Sort:
