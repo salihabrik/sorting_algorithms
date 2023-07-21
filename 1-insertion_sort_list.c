@@ -27,7 +27,7 @@ void insertion_sort_list(listint_t **list)
 			temp->prev = temp->prev->prev;
 			temp->next->prev = temp;
 
-			/* If temp is now the head, update the list pointer */
+			/* If temp is now head, update the list pointer */
 			if (temp->prev == NULL)
 				*list = temp;
 
