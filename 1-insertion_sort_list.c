@@ -4,6 +4,8 @@
  * insertion_sort_list - Sorts a doubly linked
  * @list: Pointer to the head of the doubly linked list
  */
+
+ 
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *temp;
@@ -27,7 +29,7 @@ void insertion_sort_list(listint_t **list)
 			temp->prev = temp->prev->prev;
 			temp->next->prev = temp;
 
-			/* If temp is now head, update the list pointer */
+			/* If temp is now the head, update the list pointer */
 			if (temp->prev == NULL)
 				*list = temp;
 
@@ -36,3 +38,5 @@ void insertion_sort_list(listint_t **list)
 		}
 	}
 }
+
+	
