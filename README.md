@@ -20,8 +20,14 @@ It sorts the data by inserting each element into the already sorted sublist at t
  It repeatedly passes through the list of elements to be sorted and exchanges adjacent elements if they are in the wrong order. It is simple to implement but inefficient for large lists.
 
  ![logo](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
+
+
+
 # Merge_Sort: 
 It uses the "Divide and Conquer" principle, where it divides the list into small parts, then gradually merges them together to obtain the sorted list. It is efficient and effective for large lists.
+
+![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Merge-sort-example-300px.gif/220px-Merge-sort-example-300px.gif)
+
 # Quick_Sort:
  It divides the list into smaller parts using a pivot element, then sorts the parts around the pivot. It is efficient for large lists but can be unstable in some cases. divide-and-conquer algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. For this reason, it is sometimes called partition-exchange sort.[4] The sub-arrays are then sorted recursively. This can be done in-place, requiring small additional amounts of memory to perform the sorting.
 
