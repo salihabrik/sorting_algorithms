@@ -8,6 +8,8 @@ There are several types of sorting algorithms, each with its own features and pe
 
 # Insertion_Sort: 
 It sorts the data by inserting each element into the already sorted sublist at the appropriate position. It is suitable for small lists or partially sorted lists.
+![logo](https://upload.wikimedia.org/wikipedia/commons/4/42/Insertion_sort.gif)
+
 # Bubble_Sort:
  It repeatedly passes through the list of elements to be sorted and exchanges adjacent elements if they are in the wrong order. It is simple to implement but inefficient for large lists.
 
