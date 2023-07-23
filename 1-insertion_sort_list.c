@@ -71,6 +71,5 @@ void insertion_sort_list(listint_t **list)
         }
         current = current->next;
     }
->>>>>>> 2ec9759 (Be humble, communicate clearly, and respect others. It costs nothing to be kind, but the impact is priceless)
-}
 
+}
