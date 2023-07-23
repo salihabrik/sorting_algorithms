@@ -5,7 +5,6 @@
  * @list: Pointer to the head of the doubly linked list
  */
 
- 
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *temp;
@@ -38,5 +37,3 @@ void insertion_sort_list(listint_t **list)
 		}
 	}
 }
-
-	
