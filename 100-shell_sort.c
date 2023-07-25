@@ -25,6 +25,8 @@ void swap_ints(int *a, int *b)
 void shell_sort(int *array, size_t size)
 {
 	size_t gap, i, j;
+	/*Amna i used gap to determine the gap or interval
+	 between elements during the sorting process*/
 
 	if (array == NULL || size < 2)
 		return;
