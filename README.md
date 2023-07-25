@@ -45,9 +45,7 @@ Quicksort is a comparison sort, meaning that it can sort items of any type for w
 # Shellsort 
 is an optimization of insertion sort that allows the exchange of items that are far apart. The idea is to arrange the list of elements so that, starting anywhere, taking every hth element produces a sorted list. Such a list is said to be h-sorted. It can also be thought of as h interleaved lists, each individually sorted.[6] Beginning with large values of h allows elements to move long distances in the original list, reducing large amounts of disorder quickly, and leaving less work for smaller h-sort steps to do.[7] If the list is then k-sorted for some smaller integer k, then the list remains h-sorted. Following this idea for a decreasing sequence of h values ending in 1 is guaranteed to leave a sorted list in the end.[6]
 
-![logo](https://en.wikipedia.org/wiki/File:Sorting_shellsort_anim.gif)
-
-
+![logo](https://upload.wikimedia.org/wikipedia/commons/d/d8/Sorting_shellsort_anim.gif)
 
 
 In general, there is no single best sorting algorithm for all cases. The choice of the appropriate algorithm depends on the size of the list, the type of data, and the performance requirements. Therefore, it is advisable to choose the sorting algorithm based on the specific scenario and the desired performance analysis
