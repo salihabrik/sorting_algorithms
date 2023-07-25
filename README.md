@@ -60,4 +60,44 @@ Like most variants of bubble sort, cocktail shaker sort is used primarily as an 
 ![logo](https://upload.wikimedia.org/wikipedia/commons/e/ef/Sorting_shaker_sort_anim.gif)
 
 
+#  heapsort 
+is a comparison-based sorting algorithm. Heapsort can be thought of as an improved selection sort: like selection sort, heapsort divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element from it and inserting it into the sorted region. Unlike selection sort, heapsort does not waste time with a linear-time scan of the unsorted region; rather, heap sort maintains the unsorted region in a heap data structure to more quickly find the largest element in each step
+
+![logo](https://upload.wikimedia.org/wikipedia/commons/1/1b/Sorting_heapsort_anim.gif)
+
+# radix sort
+ is a non-comparative sorting algorithm. It avoids comparison by creating and distributing elements into buckets according to their radix. For elements with more than one significant digit, this bucketing process is repeated for each digit, while preserving the ordering of the prior step, until all digits have been considered. For this reason, radix sort has also been called bucket sort and digital sort.
+
+# Radix sort 
+can be applied to data that can be sorted lexicographically, be they integers, words, punch cards, playing cards, or the mail.
+
+
+# Bitonic mergesort 
+is a parallel algorithm for sorting. It is also used as a construction method for building a sorting network. The algorithm was devised by Ken Batcher. The resulting sorting networks consist of 
+�
+(
+�
+log
+2
+⁡
+(
+�
+)
+)
+O(n\log ^{2}(n)) comparators and have a delay of 
+�
+(
+log
+2
+⁡
+(
+�
+)
+)
+O(\log ^{2}(n)), where 
+�
+n is the number of items to be sorted.[1] This makes it a popular choice for sorting large numbers of elements on an architecture which itself contains a large number of parallel execution units running in lockstep, such as a typical GPU.
+
+![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Batcher_Bitonic_Mergesort_for_eight_inputs.svg/305px-Batcher_Bitonic_Mergesort_for_eight_inputs.svg.png)
+
 In general, there is no single best sorting algorithm for all cases. The choice of the appropriate algorithm depends on the size of the list, the type of data, and the performance requirements. Therefore, it is advisable to choose the sorting algorithm based on the specific scenario and the desired performance analysis
