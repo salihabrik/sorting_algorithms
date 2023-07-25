@@ -1,55 +1,68 @@
 #include "sort.h"
 
-void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2)
+/**
+ * swap_nodes - Swaps two nodes in a doubly linked list.
+ *
+ * @list: Pointer to a pointer to the head of the list.
+ * @node: Pointer to the node to be swapped.
+ */
+static void swap_nodes(listint_t **list, listint_t *node)
 {
-    if (node1->prev)
-        node1->prev->next = node2;
-    if (node2->next)
-        node2->next->prev = node1;
+	if (node->prev)
+		node->prev->next = node->next;
+	else
+		*list = node->next;
 
-    node1->next = node2->next;
-    node2->prev = node1->prev;
-    node1->prev = node2;
-    node2->next = node1;
+	if (node->next)
+		node->next->prev = node->prev;
 
-    if (node1->prev == NULL)
-        *list = node1;
-    if (node2->prev == NULL)
-        *list = node2;
+	node->next = node->prev;
+	node->prev = node->next->prev;
+	node->next->prev = node;
+
+	if (node->prev)
+		node->prev->next = node;
 }
 
+/**
+ * cocktail_sort_list - Sorts a doubly linked list of integers
+ *
+ * @list: Pointer to a pointer to the head of the list.
+ */
 void cocktail_sort_list(listint_t **list)
 {
-    int swapped;
-    listint_t *curr;
+	int swapped = 0;
+	listint_t *tmp;
 
-    if (list == NULL || *list == NULL || (*list)->next == NULL)
-        return;
+	if (list == NULL || *list == NULL)
+		return;
 
-    do
-    {
-        swapped = 0;
-        for (curr = *list; curr->next != NULL; curr = curr->next)
-        {
-            if (curr->n > curr->next->n)
-            {
-                swap_nodes(list, curr, curr->next);
-                print_list(*list);
-                swapped = 1;
-            }
-        }
-        if (swapped == 0)
-            break;
-        swapped = 0;
-        for (curr = curr->prev; curr->prev != NULL; curr = curr->prev)
-        {
-            if (curr->n < curr->prev->n)
-            {
-                swap_nodes(list, curr->prev, curr);
-                print_list(*list);
-                swapped = 1;
-            }
-        }
-    } while (swapped);
+	do {
+		swapped = 0;
+
+		/* Forward pass: Bubble sort from left to right */
+		for (tmp = *list; tmp->next != NULL; tmp = tmp->next)
+		{
+			if (tmp->n > tmp->next->n)
+			{
+				swap_nodes(list, tmp);
+				swapped = 1;
+				print_list(*list);
+			}
+		}
+
+		if (!swapped)
+			break;
+
+		/* Backward pass: Bubble sort from right to left */
+		for (tmp = tmp->prev; tmp->prev != NULL; tmp = tmp->prev)
+		{
+			if (tmp->n < tmp->prev->n)
+			{
+				swap_nodes(list, tmp->prev);
+				swapped = 1;
+				print_list(*list);
+			}
+		}
+	} while (swapped);
 }
-
