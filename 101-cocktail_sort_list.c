@@ -1,37 +1,41 @@
+/* 101-cocktail_sort_list.c */
+
+#include <stdio.h>
 #include "sort.h"
 
 /**
  * swap_nodes - Swaps two nodes in a doubly linked list.
  *
  * @list: Pointer to a pointer to the head of the list.
- * @node: Pointer to the node to be swapped.
+ * @left: Pointer to the left node to be swapped.
+ * @right: Pointer to the right node to be swapped.
  */
-static void swap_nodes(listint_t **list, listint_t *node)
+static void swap_nodes(listint_t **list, listint_t *left, listint_t *right)
 {
-	if (node->prev)
-		node->prev->next = node->next;
+	if (left->prev)
+		left->prev->next = right;
 	else
-		*list = node->next;
+		*list = right;
 
-	if (node->next)
-		node->next->prev = node->prev;
+	if (right->next)
+		right->next->prev = left;
 
-	node->next = node->prev;
-	node->prev = node->next->prev;
-	node->next->prev = node;
+	left->next = right->next;
+	right->prev = left->prev;
+	left->prev = right;
+	right->next = left;
 
-	if (node->prev)
-		node->prev->next = node;
+	print_list(*list);
 }
 
 /**
- * cocktail_sort_list - Sorts a doubly linked list of integers
+ * cocktail_sort_list - Sorts a doubly linked list of integers sort algorithm.
  *
  * @list: Pointer to a pointer to the head of the list.
  */
 void cocktail_sort_list(listint_t **list)
 {
-	int swapped = 0;
+	int swapped;
 	listint_t *tmp;
 
 	if (list == NULL || *list == NULL)
@@ -45,23 +49,24 @@ void cocktail_sort_list(listint_t **list)
 		{
 			if (tmp->n > tmp->next->n)
 			{
-				swap_nodes(list, tmp);
+				swap_nodes(list, tmp, tmp->next);
 				swapped = 1;
-				print_list(*list);
 			}
 		}
 
 		if (!swapped)
 			break;
 
+		swapped = 0;
+		tmp = tmp->prev; /* Move tmp to the last node */
+
 		/* Backward pass: Bubble sort from right to left */
-		for (tmp = tmp->prev; tmp->prev != NULL; tmp = tmp->prev)
+		for (; tmp->prev != NULL; tmp = tmp->prev)
 		{
 			if (tmp->n < tmp->prev->n)
 			{
-				swap_nodes(list, tmp->prev);
+				swap_nodes(list, tmp->prev, tmp);
 				swapped = 1;
-				print_list(*list);
 			}
 		}
 	} while (swapped);
