@@ -5,14 +5,7 @@
  * in ascending order using the Insertion sort algorithm
  * @list: double linked llist
  */
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> new_branch_name
->>>>>>> origin/main
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *curr, *prevprev, *prevv, *curr1, *currnext;
