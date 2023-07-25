@@ -51,4 +51,13 @@ is an optimization of insertion sort that allows the exchange of items that are 
 ![logo](https://upload.wikimedia.org/wikipedia/commons/d/d8/Sorting_shellsort_anim.gif)
 
 ![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Shell_sorting_algorithm_color_bars.svg/220px-Shell_sorting_algorithm_color_bars.svg.png)
+
+# Cocktail shaker sort
+,[1] also known as bidirectional bubble sort,[2] cocktail sort, shaker sort (which can also refer to a variant of selection sort), ripple sort, shuffle sort,[3] or shuttle sort, is an extension of bubble sort. The algorithm extends bubble sort by operating in two directions. While it improves on bubble sort by more quickly moving items to the beginning of the list, it provides only marginal performance improvements.
+
+Like most variants of bubble sort, cocktail shaker sort is used primarily as an educational tool. More performant algorithms such as quicksort, merge sort, or timsort are used by the sorting libraries built into popular programming languages such as Python and Java.[4]
+
+![logo](https://upload.wikimedia.org/wikipedia/commons/e/ef/Sorting_shaker_sort_anim.gif)
+
+
 In general, there is no single best sorting algorithm for all cases. The choice of the appropriate algorithm depends on the size of the list, the type of data, and the performance requirements. Therefore, it is advisable to choose the sorting algorithm based on the specific scenario and the desired performance analysis
