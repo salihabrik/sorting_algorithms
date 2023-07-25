@@ -28,8 +28,11 @@ It uses the "Divide and Conquer" principle, where it divides the list into small
 
 ![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Merge-sort-example-300px.gif/220px-Merge-sort-example-300px.gif)
 
+![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/300px-Merge_sort_algorithm_diagram.svg.png)
+
 # Quick_Sort:
  It divides the list into smaller parts using a pivot element, then sorts the parts around the pivot. It is efficient for large lists but can be unstable in some cases. divide-and-conquer algorithm. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. For this reason, it is sometimes called partition-exchange sort.[4] The sub-arrays are then sorted recursively. This can be done in-place, requiring small additional amounts of memory to perform the sorting.
+![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Quicksort-diagram.svg/200px-Quicksort-diagram.svg.png)
 
 Quicksort is a comparison sort, meaning that it can sort items of any type for which a "less-than" relation (formally, a total order) is defined. Most implementations of quicksort are not stable, meaning that the relative order of equal sort items is not preserved.
 
@@ -47,5 +50,5 @@ is an optimization of insertion sort that allows the exchange of items that are 
 
 ![logo](https://upload.wikimedia.org/wikipedia/commons/d/d8/Sorting_shellsort_anim.gif)
 
-
+![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Shell_sorting_algorithm_color_bars.svg/220px-Shell_sorting_algorithm_color_bars.svg.png)
 In general, there is no single best sorting algorithm for all cases. The choice of the appropriate algorithm depends on the size of the list, the type of data, and the performance requirements. Therefore, it is advisable to choose the sorting algorithm based on the specific scenario and the desired performance analysis
