@@ -1,123 +1,51 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "sort.h"
 
 /**
- * insertion_sort_list - Sorts a doubly linked list of integers
- * in ascending order
- *
- * using the Insertion sort algorithm
- * @list: Pointer to the head of the doubly linked list
+ * insertion_sort_list - sorts a doubly linked list of integers
+ * in ascending order using the Insertion sort algorithm
+ * @list: double linked llist
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *current;
+	listint_t *curr, *prevprev, *prevv, *curr1, *currnext;
 
-	if (*list == NULL || (*list)->next == NULL)
+	if (list == NULL)
 		return;
 
-	current = (*list)->next;
+	curr = *list;
 
-	while (current != NULL)
+	while (curr)
 	{
-		listint_t *temp = current;
-
-		while (temp->prev != NULL && temp->n < temp->prev->n)
+		if (curr->prev && curr->prev->n > curr->n)
 		{
-			listint_t *prev = temp->prev;
-			listint_t *next = temp->next;
+			/*Store the necessary pointers for swapping*/
+			prevprev = curr->prev->prev;
+			prevv = curr->prev;
+			curr1 = curr;
+			currnext = curr->next;
 
-			if (prev->prev != NULL)
-				prev->prev->next = temp;
+			/* Adjust the pointers to swap the nodes*/
+			prevv->next = currnext;
+
+			if (currnext)
+				currnext->prev = prevv;
+
+			curr1->prev = prevprev;
+			curr1->next = prevv;
+
+			if (prevprev)
+				prevprev->next = curr1;
+
 			else
-				*list = temp;
-			if (next != NULL)
-				next->prev = prev;
-			temp->prev = prev->prev;
-			temp->next = prev;
-			prev->prev = temp;
-			prev->next = next;
+				*list = curr1;
+
+			prevv->prev = curr1;
+			curr = *list;
 			print_list(*list);
+			continue; /*Continue to the next iteration*/
 		}
-		current = current->next;
-	}
-=======
- 
-=======
->>>>>>> 3c3d3ce (Be humble, communicate clearly, and respect others. It costs nothing to be kind, but the impact is priceless)
-void insertion_sort_list(listint_t **list)
-{
-	listint_t *current;
-
-	if (*list == NULL || (*list)->next == NULL)
-		return;
-
-	current = (*list)->next;
-
-<<<<<<< HEAD
-=======
- 
-void insertion_sort_list(listint_t **list)
-{
-    if (list == NULL || *list == NULL || (*list)->next == NULL)
-        return;
-
-    listint_t *current = (*list)->next;
-    while (current != NULL)
-    {
-        listint_t *temp = current;
-        while (temp->prev != NULL && temp->n < temp->prev->n)
-        {
-            if (temp->next != NULL)
-                temp->next->prev = temp->prev;
-            temp->prev->next = temp->next;
-
-            if (temp->prev->prev != NULL)
-                temp->prev->prev->next = temp;
-            temp->next = temp->prev;
-            temp->prev = temp->prev->prev;
-            temp->next->prev = temp;
-
->>>>>>> 2ec9759 (Be humble, communicate clearly, and respect others. It costs nothing to be kind, but the impact is priceless)
-            if (temp->prev == NULL)
-                *list = temp;
-            print_list(*list);
-        }
-        current = current->next;
-    }
-<<<<<<< HEAD
-
-}
-=======
-}
-
->>>>>>> 2ec9759 (Be humble, communicate clearly, and respect others. It costs nothing to be kind, but the impact is priceless)
-=======
-	while (current != NULL)
-	{
-		listint_t *temp = current;
-
-		while (temp->prev != NULL && temp->n < temp->prev->n)
-		{
-			listint_t *prev = temp->prev;
-			listint_t *next = temp->next;
-
-			if (prev->prev != NULL)
-				prev->prev->next = temp;
-			else
-				*list = temp;
-			if (next != NULL)
-				next->prev = prev;
-			temp->prev = prev->prev;
-			temp->next = prev;
-			prev->prev = temp;
-			prev->next = next;
-			print_list(*list);
-		}
-		current = current->next;
+		else
+			curr = curr->next;
 	}
 }
->>>>>>> 3c3d3ce (Be humble, communicate clearly, and respect others. It costs nothing to be kind, but the impact is priceless)
